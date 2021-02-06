@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /*
 Health States, 
@@ -20,69 +21,70 @@ public enum StatusEffects
 
 public class HealthSystem : MonoBehaviour
 {
-    // Variables for the Health System
-
+    [Header("Player Health Attributes")]
     [SerializeField]
     // Max Lives/Health the player can have
-    private int MaxHealth;
+    private int maxHealth;
 
     [SerializeField]
     // Total Lives/Health the player currently has
-    private int Health;
+    private int currentHealth;
 
     [SerializeField]
     // Lives/Health Regened per Round or Level or whenever or however long
-    private int HealthRegenRate;
+    private int healthRegenRate;
 
     [SerializeField]
-    private TMPro.TextMeshProUGUI healthText;
+    private TextMeshProUGUI healthText;
 
     // Start is called before the first frame update
     void Start()
     {
         // Make sure the health stays loaded inbetween levels, for saving purposes or 
         DontDestroyOnLoad(gameObject);
+        currentHealth = maxHealth;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        healthText.SetText(currentHealth.ToString());
     }
 
     // Update health to any value
     public void updateHealth(int newHealth)
     {
-        Health = newHealth;
+        currentHealth = newHealth;
     }
 
     // Increase Health by a set value
-    public void increaseHealth(int healthAmount)
+    public void RegenHealth(int healthRegen)
     {
-        Health += healthAmount;
+        currentHealth += healthRegen;
     }
 
     // Decrease Health by a set value
-    public void decreaseHealth(int healthAmount)
+    public void Damage(int damage)
     {
-        Health -= healthAmount;
+        currentHealth -= damage;
     }
 
     // Update  MaxHealth to any value
     public void updateMaxHealth(int newMaxHealth)
     {
-        MaxHealth = newMaxHealth;
+        maxHealth = newMaxHealth;
     }
 
     // Increase MaxHealth by a set value
     public void increaseMaxHealth(int maxHealthAmount)
     {
-        MaxHealth += maxHealthAmount;
+        maxHealth += maxHealthAmount;
     }
 
     // Decrease MaxHealth by a set value
     public void decreaseMaxHealth(int maxHealthAmount)
     {
-        MaxHealth -= maxHealthAmount;
+        maxHealth -= maxHealthAmount;
     }
 }
