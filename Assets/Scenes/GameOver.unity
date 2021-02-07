@@ -518,7 +518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146.94, y: 41.8}
+  m_AnchoredPosition: {x: -146.94, y: -40.000004}
   m_SizeDelta: {x: 293.8795, y: 65.1064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &982661786
@@ -1180,7 +1180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146.94, y: 41.8}
+  m_AnchoredPosition: {x: 146.94, y: -40}
   m_SizeDelta: {x: 293.8795, y: 65.1064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860046173
@@ -1314,8 +1314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 195.70996}
-  m_SizeDelta: {x: 607.9509, y: 158.58}
+  m_AnchoredPosition: {x: 0, y: 148}
+  m_SizeDelta: {x: 758.1918, y: 158.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930943904
 MonoBehaviour:
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Over
+  m_text: You missed your DEADLINE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68bc43d47d273f94999e5a4dff38974c, type: 2}
   m_sharedMaterial: {fileID: 8767021781494266771, guid: 68bc43d47d273f94999e5a4dff38974c, type: 2}
