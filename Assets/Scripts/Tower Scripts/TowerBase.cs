@@ -19,7 +19,7 @@ public abstract class TowerBase : MonoBehaviour
     protected Transform sapwnPoint;
     [SerializeField]
     protected LayerMask enemyLayers;
-
+    [SerializeField]
     protected GameObject EnemyTarget;
 
     protected abstract void Fire();

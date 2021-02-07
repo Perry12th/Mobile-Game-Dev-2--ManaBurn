@@ -12,7 +12,7 @@ public class EnemyBase : MonoBehaviour
 
     protected virtual void OnDeath()
     {
-        GameObject.Destroy(this);
+        Destroy(gameObject);
     }
 
     protected virtual void OnHit(ProjectileBase projectile)

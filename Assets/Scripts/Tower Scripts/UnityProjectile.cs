@@ -19,5 +19,9 @@ public class UnityProjectile : ProjectileBase
         {
             transform.position = Vector3.MoveTowards(transform.position, trackingTarget.transform.position, speed * Time.deltaTime);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
