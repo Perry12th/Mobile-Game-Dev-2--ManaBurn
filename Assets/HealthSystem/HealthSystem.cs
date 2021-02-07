@@ -41,8 +41,7 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         // Make sure the health stays loaded inbetween levels, for saving purposes or 
-        DontDestroyOnLoad(gameObject);
-        currentHealth = maxHealth;
+        //DontDestroyOnLoad(gameObject);
         
     }
 

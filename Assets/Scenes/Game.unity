@@ -516,6 +516,8 @@ GameObject:
   m_Component:
   - component: {fileID: 211893875}
   - component: {fileID: 211893874}
+  - component: {fileID: 211893876}
+  - component: {fileID: 211893877}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -536,8 +538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
-  healthRegenRate: 0
+  currentHealth: 100
+  healthRegenRate: 5
   healthText: {fileID: 664775794}
 --- !u!4 &211893875
 Transform:
@@ -553,6 +555,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211893876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211893873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0329c0f65b940d446b7ca72b19c75e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &211893877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211893873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4d835e6467e874f9fd21b8e120f554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSystem: {fileID: 0}
+  inventorySystem: {fileID: 0}
+  globalDamageMultiplier: 1
+  Money: 500
 --- !u!1 &215605065
 GameObject:
   m_ObjectHideFlags: 0
