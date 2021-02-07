@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Bugs : EnemyBase
 {
-    private void OnCollisionEnter(Collision collision)
+    protected void OnTriggerEnter(Collider other)
     {
-        ProjectileBase projectile = collision.gameObject.GetComponent<ProjectileBase>();
-        
+        ProjectileBase projectile = other.GetComponent<ProjectileBase>();
+
         if (projectile)
         {
-            OnHit(projectile);
+            Destroy(other);
+            Debug.Log("Projectile hit");
+            OnHit(projectile); 
         }
-        
+    }
+
+    protected override void OnHit(ProjectileBase projectile)
+    {
+        OnDeath();
+    }
+    protected override void OnDeath()
+    {
+        Debug.Log("Death");
+        Destroy(gameObject);
     }
 }
