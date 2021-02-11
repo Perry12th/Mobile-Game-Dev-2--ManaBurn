@@ -17,7 +17,7 @@ public class Item : ScriptableObject
     private bool affectsHealth;
 
     [SerializeField]
-    private bool affectsDamage;
+    private bool affectsDamageMultiplier;
 
     [SerializeField]
     private bool givesMoney;
@@ -43,7 +43,7 @@ public class Item : ScriptableObject
                 GameManager.Instance.getHealthSystem().RegenHealth(5);
         }
 
-        if (affectsDamage)
+        if (affectsDamageMultiplier)
         {
             if (damageMultiplier > 0)
                 GameManager.Instance.increaseDamageMultiplier(damageMultiplier);
