@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84fb4767bd13de48a53f2c6c85e14cf, type: 3}
   m_Name: HealingItem
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
-  Description: 
-  affectsHealth: 0
+  itemIcon: {fileID: 21300000, guid: a7a610d63515c064fa868990a7eff5aa, type: 3}
+  Description: Heals you a little bit
+  Uses: 5
+  affectsHealth: 1
   affectsDamageMultiplier: 0
   givesMoney: 0
-  healthChange: 0
+  healthChange: 10
   damageMultiplier: 0
   amountOfMoney: 0
