@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84fb4767bd13de48a53f2c6c85e14cf, type: 3}
-  m_Name: TestItem
+  m_Name: HealingItem
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 21300000, guid: 0c20694ae2cf780498fc2dd075bc4743, type: 3}
-  Description: This item will Heal you
-  affectsHealth: 1
+  itemIcon: {fileID: 0}
+  Description: 
+  affectsHealth: 0
   affectsDamageMultiplier: 0
   givesMoney: 0
-  healthChange: 10
+  healthChange: 0
   damageMultiplier: 0
   amountOfMoney: 0

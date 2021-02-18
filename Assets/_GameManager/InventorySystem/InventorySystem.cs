@@ -7,16 +7,4 @@ public class InventorySystem : MonoBehaviour
     // Items being held in the Inventory
     [SerializeField]
     private ItemSlot[] inventoryItems;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

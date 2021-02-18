@@ -12,6 +12,9 @@ public class Item : ScriptableObject
     [SerializeField]
     private string Description;
 
+    [SerializeField]
+    private int Uses;
+
     [Header("Item Variables")]
     [SerializeField]
     private bool affectsHealth;
@@ -33,34 +36,54 @@ public class Item : ScriptableObject
 
     public void useItem()
     {
-        if (affectsHealth)
+        if (--Uses >= 0)
         {
-            if (healthChange > 0)
-                GameManager.Instance.getHealthSystem().RegenHealth(healthChange);
-            else if (healthChange < 0)
-                GameManager.Instance.getHealthSystem().Damage(-healthChange);
-            else
-                GameManager.Instance.getHealthSystem().RegenHealth(5);
-        }
 
-        if (affectsDamageMultiplier)
-        {
-            if (damageMultiplier > 0)
-                GameManager.Instance.increaseDamageMultiplier(damageMultiplier);
-            else if (damageMultiplier < 0)
-                GameManager.Instance.decreaseDamageMultiplier(-damageMultiplier);
-            else
-                GameManager.Instance.increaseDamageMultiplier(1.0f);
-        }
+            if (affectsHealth)
+            {
+                if (healthChange > 0)
+                    GameManager.Instance.getHealthSystem().RegenHealth(healthChange);
+                else if (healthChange < 0)
+                    GameManager.Instance.getHealthSystem().Damage(-healthChange);
+                else
+                    GameManager.Instance.getHealthSystem().RegenHealth(5);
+            }
 
-        if (givesMoney)
-        {
-            if (amountOfMoney > 0)
-                GameManager.Instance.increaseMoney(amountOfMoney);
-            else if (amountOfMoney < 0)
-                GameManager.Instance.decreaseMoney(-amountOfMoney);
-            else
-                GameManager.Instance.increaseMoney(50);
+            if (affectsDamageMultiplier)
+            {
+                if (damageMultiplier > 0)
+                    GameManager.Instance.increaseDamageMultiplier(damageMultiplier);
+                else if (damageMultiplier < 0)
+                    GameManager.Instance.decreaseDamageMultiplier(-damageMultiplier);
+                else
+                    GameManager.Instance.increaseDamageMultiplier(1.0f);
+            }
+
+            if (givesMoney)
+            {
+                if (amountOfMoney > 0)
+                    GameManager.Instance.increaseMoney(amountOfMoney);
+                else if (amountOfMoney < 0)
+                    GameManager.Instance.decreaseMoney(-amountOfMoney);
+                else
+                    GameManager.Instance.increaseMoney(50);
+            }
+
         }
+    }
+
+    public Sprite getSprite()
+    {
+        return itemIcon;
+    }
+
+    public int getUses()
+    {
+        return Uses;
+    }
+
+    public string getUsesToString()
+    {
+        return Uses.ToString();
     }
 }
