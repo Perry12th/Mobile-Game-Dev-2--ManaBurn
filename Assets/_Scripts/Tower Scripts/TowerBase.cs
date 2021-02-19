@@ -20,19 +20,25 @@ public abstract class TowerBase : MonoBehaviour
     [SerializeField]
     protected LayerMask enemyLayers;
     [SerializeField]
-    protected GameObject EnemyTarget;
+    protected EnemyBase EnemyTarget;
 
     protected abstract void Fire();
+
     
 
-    protected virtual void OnTriggerEnter(Collider other)
-    {
-        EnemyBase possibleEnemy = other.GetComponent<EnemyBase>();
+    //protected virtual void OnTriggerEnter(Collider other)
+    //{
+    //    EnemyBase possibleEnemy = other.GetComponent<EnemyBase>();
 
-        if (possibleEnemy && EnemyTarget == null)
-        {
-            EnemyTarget = possibleEnemy.gameObject;
-        }
+    //    if (possibleEnemy && EnemyTarget == null)
+    //    {
+    //        EnemyTarget = possibleEnemy.gameObject;
+    //    }
+    //}
+
+    protected EnemyBase GetClosestEnemy()
+    {
+       return EnemyBase.GetClosestEnemy(transform.position, towerRange);
     }
 
 }

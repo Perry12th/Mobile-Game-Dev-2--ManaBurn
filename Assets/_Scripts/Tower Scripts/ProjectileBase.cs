@@ -10,4 +10,6 @@ public class ProjectileBase : MonoBehaviour
     public int Damage => damage;
     [SerializeField]
     protected float speed;
+    [SerializeField]
+    protected LayerMask enemyLayer;
 }

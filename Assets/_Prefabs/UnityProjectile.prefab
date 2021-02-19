@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -855245456778442109}
   - component: {fileID: -8403761157775659403}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: UnityProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,6 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 10
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &-8403761157775659403
 Rigidbody:
   m_ObjectHideFlags: 0

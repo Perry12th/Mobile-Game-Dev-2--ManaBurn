@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnityTower : TowerBase
+public class UnityTowerMk2 : TowerBase
 {
     [SerializeField]
     Transform towerBase;
@@ -20,10 +20,8 @@ public class UnityTower : TowerBase
         if (EnemyTarget)
         {
             Vector3 targetDirection = EnemyTarget.transform.position - towerBase.transform.position;
-            Vector3 newDirection = Vector3.RotateTowards(towerBase.transform.forward, targetDirection, 2.0f * Time.deltaTime, 0.0f);
+            Vector3 newDirection = Vector3.RotateTowards(towerBase.transform.forward, targetDirection, 3.0f * Time.deltaTime, 0.0f);
             towerBase.transform.rotation = Quaternion.LookRotation(newDirection);
-            //towerBase.LookAt(new Vector3(EnemyTarget.transform.position.x, 0, EnemyTarget.transform.position.z));
-            
         }
     }
 
@@ -33,8 +31,9 @@ public class UnityTower : TowerBase
         if (EnemyTarget)
         {
             var newProjectile = Instantiate(projectile, sapwnPoint.position, Quaternion.identity);
-
-            newProjectile.GetComponent<UnityProjectile>().SetTarget(EnemyTarget);
+            var enemyDirection = EnemyTarget.transform.position - towerBase.transform.position;
+            enemyDirection.y = 0;
+            newProjectile.GetComponent<UnityAPProjectile>().SetDirection(enemyDirection);
         }
     }
 }

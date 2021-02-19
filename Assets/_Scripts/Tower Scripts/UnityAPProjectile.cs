@@ -2,28 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnityProjectile : ProjectileBase
+public class UnityAPProjectile : ProjectileBase
 {
-    
-    EnemyBase trackingTarget;
-    Vector3 targetPosition;
     Vector3 moveDir;
-
-    public void SetTarget(EnemyBase target)
-    {
-        trackingTarget = target;
-    }
+    [SerializeField]
+    float blastRange;
 
     // Update is called once per frame
     void Update()
     {
-        if (trackingTarget)
-        {
-            targetPosition = trackingTarget.transform.position;
-            moveDir = (targetPosition - transform.position).normalized;
-        }
-
         transform.position += moveDir * speed * Time.deltaTime;
+    }
+
+    public void SetDirection(Vector3 direction)
+    {
+        moveDir = direction;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,14 +25,20 @@ public class UnityProjectile : ProjectileBase
 
         if (possibleEnemy)
         {
-            possibleEnemy.OnHit(this);
+            Collider[] enemies = Physics.OverlapSphere(transform.position, blastRange, enemyLayer);
+
+            foreach(var enemy in enemies)
+            {
+                enemy.GetComponent<EnemyBase>().OnHit(this);
+            }
+
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("MapBounds"))
+        if (other.CompareTag("MapBounds"))
         {
             Destroy(gameObject);
         }
