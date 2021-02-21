@@ -11,17 +11,22 @@ public class EnemyBase : MonoBehaviour
         EnemyBase closest = null;
         foreach (EnemyBase enemy in enemyList)
         {
-            if (Vector3.Distance(position, enemy.transform.position) <= maxRange)
+            if (enemy.gameObject.activeSelf)
             {
-                if (closest == null)
+
+
+                if (Vector3.Distance(position, enemy.transform.position) <= maxRange)
                 {
-                    closest = enemy;
-                }
-                else
-                {
-                    if (Vector3.Distance(position, enemy.transform.position) < Vector3.Distance(position, closest.transform.position))
+                    if (closest == null)
                     {
                         closest = enemy;
+                    }
+                    else
+                    {
+                        if (Vector3.Distance(position, enemy.transform.position) < Vector3.Distance(position, closest.transform.position))
+                        {
+                            closest = enemy;
+                        }
                     }
                 }
             }
