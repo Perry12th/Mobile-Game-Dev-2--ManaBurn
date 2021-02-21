@@ -18,12 +18,15 @@ public class Bugs : EnemyBase
 
     public override void OnHit(ProjectileBase projectile)
     {
+        enemySFX.Play();
         OnDeath();
+        
     }
     protected override void OnDeath()
     {
         Debug.Log("Death");
+
         enemyList.Remove(this);
-        Destroy(gameObject);
+        Destroy(gameObject, 0.1f);
     }
 }

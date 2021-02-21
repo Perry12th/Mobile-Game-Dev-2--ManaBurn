@@ -34,6 +34,7 @@ public class UnityTowerMk2 : TowerBase
             var enemyDirection = EnemyTarget.transform.position - towerBase.transform.position;
             enemyDirection.y = 0;
             newProjectile.GetComponent<UnityAPProjectile>().SetDirection(enemyDirection);
+            turretSFX.Play();
         }
     }
 }

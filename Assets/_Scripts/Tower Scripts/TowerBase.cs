@@ -21,6 +21,8 @@ public abstract class TowerBase : MonoBehaviour
     protected LayerMask enemyLayers;
     [SerializeField]
     protected EnemyBase EnemyTarget;
+    [SerializeField]
+    protected AudioSource turretSFX;
 
     protected abstract void Fire();
 

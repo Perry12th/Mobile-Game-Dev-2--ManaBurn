@@ -35,6 +35,8 @@ public class EnemyBase : MonoBehaviour
     int health;
     [SerializeField]
     float speed;
+    [SerializeField]
+    protected AudioSource enemySFX;
 
     protected virtual void Awake()
     {
