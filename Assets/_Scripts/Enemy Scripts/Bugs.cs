@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Bugs : EnemyBase
 {
+
+    public EnemyManager enemyManager;
+
+    void Start()
+    {
+        enemyManager = FindObjectOfType<EnemyManager>();
+    }
+
     //protected void OnTriggerEnter(Collider other)
     //{
     //    ProjectileBase projectile = other.GetComponent<ProjectileBase>();
@@ -26,7 +34,8 @@ public class Bugs : EnemyBase
     {
         Debug.Log("Death");
 
-        enemyList.Remove(this);
-        Destroy(gameObject, 0.1f);
+        enemyManager.ReturnEnemy(gameObject);
+        //enemyList.Remove(this);
+        //Destroy(gameObject, 0.1f);
     }
 }

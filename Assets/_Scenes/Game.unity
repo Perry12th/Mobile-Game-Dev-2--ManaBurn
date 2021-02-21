@@ -1707,6 +1707,52 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1890628822823158358, guid: 3e216dc3a47837145a0e3a74b319b466, type: 3}
   m_PrefabInstance: {fileID: 707934118}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &513974781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513974783}
+  - component: {fileID: 513974782}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &513974782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513974781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e807903ae69194c94b7d356b9cafc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 4184497855764372125, guid: bb2dbda8c93c8d84e81a976a0cf935f9, type: 3}
+  enemy2: {fileID: 5420290454759515472, guid: 186e945655678c44d93a6f6a17dd3abf, type: 3}
+  maxEnemies: 5
+--- !u!4 &513974783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513974781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &562869993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4186,6 +4232,7 @@ GameObject:
   - component: {fileID: 1145879184}
   - component: {fileID: 1145879183}
   - component: {fileID: 1145879182}
+  - component: {fileID: 1145879185}
   m_Layer: 5
   m_Name: Next wave
   m_TagString: Untagged
@@ -4256,7 +4303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1145879183}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1145879185}
+        m_TargetAssemblyTypeName: NewWaveButton, Assembly-CSharp
+        m_MethodName: startNextWaveButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1145879183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4295,6 +4354,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145879180}
   m_CullTransparentMesh: 1
+--- !u!114 &1145879185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145879180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bf3f3ad080d574588045ec9d770852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyManager: {fileID: 513974782}
 --- !u!1 &1158924103
 GameObject:
   m_ObjectHideFlags: 0
