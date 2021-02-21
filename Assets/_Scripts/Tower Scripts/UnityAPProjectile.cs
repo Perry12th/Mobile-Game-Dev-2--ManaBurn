@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class UnityAPProjectile : ProjectileBase
 {
+    EnemyBase trackingTarget;
+    Vector3 targetPosition;
     Vector3 moveDir;
+
     [SerializeField]
     float blastRange;
 
     // Update is called once per frame
     void Update()
     {
+        if (trackingTarget)
+        {
+            targetPosition = trackingTarget.transform.position;
+            moveDir = (targetPosition - transform.position).normalized;
+        }
+
         transform.position += moveDir * speed * Time.deltaTime;
     }
 
-    public void SetDirection(Vector3 direction)
+    public void SetTarget(EnemyBase target)
     {
-        moveDir = direction;
+        trackingTarget = target;
     }
 
     private void OnTriggerEnter(Collider other)

@@ -22,7 +22,6 @@ public class UnityTower : TowerBase
             Vector3 targetDirection = EnemyTarget.transform.position - towerBase.transform.position;
             Vector3 newDirection = Vector3.RotateTowards(towerBase.transform.forward, targetDirection, 2.0f * Time.deltaTime, 0.0f);
             towerBase.transform.rotation = Quaternion.LookRotation(newDirection);
-            //towerBase.LookAt(new Vector3(EnemyTarget.transform.position.x, 0, EnemyTarget.transform.position.z));
             
         }
     }
