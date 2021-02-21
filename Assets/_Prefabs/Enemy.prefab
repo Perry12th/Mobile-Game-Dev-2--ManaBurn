@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
-  endOfPathInstruction: 0
+  endOfPathInstruction: 2
   speed: 4
 --- !u!114 &2869558236977053743
 MonoBehaviour:
@@ -287,6 +287,7 @@ MonoBehaviour:
   health: 0
   speed: 5
   enemySFX: {fileID: 3166872645283477066}
+  enemyManager: {fileID: 0}
 --- !u!135 &835113505481482339
 SphereCollider:
   m_ObjectHideFlags: 0

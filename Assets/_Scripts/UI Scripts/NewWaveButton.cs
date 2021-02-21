@@ -17,10 +17,10 @@ public class NewWaveButton : MonoBehaviour
         //This is hard coded for now lol
         for(int i = 0; i < 5; i++)
         {
-            if (Time.frameCount % Random.Range(200, 700) == 0)
-            {
+            //if (Time.frameCount % Random.Range(200, 700) == 0)
+           //{
                 enemyManager.GetEnemy();
-            }
+           // }
         }
 
 
