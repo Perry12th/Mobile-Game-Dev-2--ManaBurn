@@ -10,18 +10,10 @@ public class ItemSlot : MonoBehaviour
     public GameObject itemUsesGameObject;
     private void Awake()
     {
-        if (itemInSlot != null)
+        if (hasItemInSlot())
         {
-            if (itemInSlot.getUses() > 0)
-            {
-                itemGameObject.GetComponent<Image>().sprite = itemInSlot.getSprite();
-                itemUsesGameObject.GetComponent<TMPro.TextMeshProUGUI>().text = itemInSlot.getUsesToString();
-            }
-            else
-            {
-                itemGameObject.SetActive(false);
-                itemUsesGameObject.SetActive(false);
-            }
+            itemGameObject.GetComponent<Image>().sprite = itemInSlot.getSprite();
+            itemUsesGameObject.GetComponent<TMPro.TextMeshProUGUI>().text = itemInSlot.getUsesToString();
         }
         else
         {
@@ -32,20 +24,31 @@ public class ItemSlot : MonoBehaviour
 
     public void useItemInSlot()
     {
-        itemInSlot.useItem();
-        if (itemInSlot.getUses() <= 0)
+        if (itemInSlot.getUses() > 0)
         {
-            itemGameObject.SetActive(false);
-            itemUsesGameObject.SetActive(false);
-        }
-        else
-        {
+            itemInSlot.useItem();
             updateItem();
         }
+    }
+
+    public void addItemToSlot(Item item)
+    {
+        itemInSlot = item;
+
+        itemGameObject.SetActive(true);
+        itemUsesGameObject.SetActive(true);
+
+        itemGameObject.GetComponent<Image>().sprite = itemInSlot.getSprite();
+        itemUsesGameObject.GetComponent<TMPro.TextMeshProUGUI>().text = itemInSlot.getUsesToString();
     }
 
     public void updateItem()
     {
         itemUsesGameObject.GetComponent<TMPro.TextMeshProUGUI>().text = itemInSlot.getUsesToString();
+    }
+
+    public bool hasItemInSlot()
+    {
+        return itemInSlot != null;
     }
 }

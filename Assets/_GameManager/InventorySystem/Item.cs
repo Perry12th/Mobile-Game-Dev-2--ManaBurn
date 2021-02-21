@@ -86,4 +86,9 @@ public class Item : ScriptableObject
     {
         return Uses.ToString();
     }
+
+    public void increaseUses(int num)
+    {
+        Uses += num;
+    }
 }
