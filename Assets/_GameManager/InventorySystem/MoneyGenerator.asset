@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84fb4767bd13de48a53f2c6c85e14cf, type: 3}
   m_Name: MoneyGenerator
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
-  Description: 
-  Uses: 0
+  itemIcon: {fileID: 21300000, guid: cc9f77fac7f441c43b5d6246d201f014, type: 3}
+  Description: Gives a little bit of money
+  Uses: 3
   affectsHealth: 0
   affectsDamageMultiplier: 0
-  givesMoney: 0
+  givesMoney: 1
   healthChange: 0
   damageMultiplier: 0
-  amountOfMoney: 0
+  amountOfMoney: 100
