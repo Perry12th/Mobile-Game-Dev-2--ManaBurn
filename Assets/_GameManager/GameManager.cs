@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(instance);
-            moneyText.text = getMoney().ToString();
+            if (moneyText)
+            {
+                moneyText.text = getMoney().ToString();
+            }
         }
         else
         {

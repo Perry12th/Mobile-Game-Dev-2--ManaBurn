@@ -59,4 +59,9 @@ public class EnemyBase : MonoBehaviour
         OnDeath();
     }
 
+    private void OnDestroy()
+    {
+        enemyList.Remove(this);
+    }
+
 }
