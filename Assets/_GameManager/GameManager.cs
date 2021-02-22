@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(instance);
+            moneyText.text = getMoney().ToString();
         }
         else
         {
@@ -41,6 +42,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private int Money = 500;
 
+    [Header("UI Elements")]
+    [SerializeField]
+    private TMPro.TextMeshProUGUI moneyText;
+
     public HealthSystem getHealthSystem()
     {
         return healthSystem;
@@ -59,11 +64,13 @@ public class GameManager : MonoBehaviour
     public void increaseMoney(int moneyAmount)
     {
         Money += moneyAmount;
+        moneyText.text = Money.ToString();
     }
 
     public void decreaseMoney(int moneyAmount)
     {
         Money -= moneyAmount;
+        moneyText.text = Money.ToString();
     }
 
     public float getDamageMultiplier()
