@@ -64,6 +64,7 @@ public class InventorySystem : MonoBehaviour
                 if (!inventoryItems[i].hasItemInSlot())
                 {
                     inventoryItems[i].addItemToSlot(item);
+                    inventoryItems[i].itemInSlot.increaseUses(1);
                     inventoryItems[i].updateItem();
                     break;
                 }
