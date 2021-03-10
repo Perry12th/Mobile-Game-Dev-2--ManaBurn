@@ -207,6 +207,10 @@ PrefabInstance:
       value: 1.352
       objectReference: {fileID: 0}
     - target: {fileID: 198076924919084778, guid: 0624c6f5a57851d48ba74b4f86ec13d7, type: 3}
+      propertyPath: lengthInSec
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198076924919084778, guid: 0624c6f5a57851d48ba74b4f86ec13d7, type: 3}
       propertyPath: ShapeModule.radius.value
       value: 0.52
       objectReference: {fileID: 0}
