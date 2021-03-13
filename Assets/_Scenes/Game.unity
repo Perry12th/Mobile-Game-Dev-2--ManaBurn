@@ -2130,6 +2130,7 @@ MonoBehaviour:
   enemy: {fileID: 4184497855764372125, guid: bb2dbda8c93c8d84e81a976a0cf935f9, type: 3}
   enemy2: {fileID: 5420290454759515472, guid: 186e945655678c44d93a6f6a17dd3abf, type: 3}
   maxEnemies: 5
+  waveDifficulty: 0
 --- !u!4 &513974783
 Transform:
   m_ObjectHideFlags: 0
@@ -8720,18 +8721,6 @@ PrefabInstance:
     - target: {fileID: 3458571483299814978, guid: b5c2cb8e79806c848b8e96d4da2a2267, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458571483299814978, guid: b5c2cb8e79806c848b8e96d4da2a2267, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458571483299814978, guid: b5c2cb8e79806c848b8e96d4da2a2267, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3458571483299814978, guid: b5c2cb8e79806c848b8e96d4da2a2267, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3458571483299814978, guid: b5c2cb8e79806c848b8e96d4da2a2267, type: 3}
       propertyPath: m_LocalPosition.x
