@@ -13,16 +13,9 @@ public class NewWaveButton : MonoBehaviour
 
     public void startNextWaveButton()
     {
-        spawningEnemies = true;
-        //This is hard coded for now lol
-        for(int i = 0; i < 5; i++)
-        {
-            //if (Time.frameCount % Random.Range(200, 700) == 0)
-           //{
-                enemyManager.GetEnemy();
-           // }
-        }
 
+           enemyManager.StartWave();
+           
 
 
     }

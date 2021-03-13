@@ -14,8 +14,10 @@ public class EnemyManager : MonoBehaviour
     public GameObject enemy;
     public GameObject enemy2;
     public int maxEnemies;
+    public int waveDifficulty;
 
-    private Queue<GameObject> enemyPool;
+    private int waveNum;
+
 
     public commands cmds;
 
@@ -23,34 +25,36 @@ public class EnemyManager : MonoBehaviour
     void Start()
     {
         cmds.WaveNumber = 2;
-        BuildEnemyPool(cmds);
+        waveNum = 0;
     }
 
-    private void BuildEnemyPool(commands cmdList)
-    {
-        enemyPool = new Queue<GameObject>();
 
-        for(int i = 0; i < 10; i++)
+    public void StartWave()
+    {
+
+        StartCoroutine(WaveCoroutine());
+       
+
+    }
+
+    IEnumerator WaveCoroutine()
+    {
+        waveDifficulty = ++waveNum % 5 == 0 ? waveDifficulty++ : waveDifficulty;
+
+        for (int i = 0; i < waveNum * 3; i++)
         {
-            var tempEnemy = Instantiate(enemy);
-            tempEnemy.SetActive(false);
-            tempEnemy.transform.parent = transform;
-            enemyPool.Enqueue(tempEnemy);
+
+            Instantiate(enemy);
+            yield return new WaitForSeconds(0.2f);
+
         }
 
+        for (int i = 0; i < waveDifficulty; i++)
+        {
+            Instantiate(enemy2);
+            yield return new WaitForSeconds(0.7f);
 
+        }
     }
 
-    public GameObject GetEnemy()
-    {
-        var newEnemy = enemyPool.Dequeue();
-        newEnemy.SetActive(true);
-        return newEnemy;
-    }
-
-    public void ReturnEnemy(GameObject returnedEnemy)
-    {
-        returnedEnemy.SetActive(false);
-        enemyPool.Enqueue(returnedEnemy);
-    }
 }
