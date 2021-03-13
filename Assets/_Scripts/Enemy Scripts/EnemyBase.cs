@@ -52,6 +52,11 @@ public class EnemyBase : MonoBehaviour
         enemyList.Add(this);
     }
 
+    protected void OnDisable()
+    {
+        enemyList.Remove(this);
+    }
+
     protected virtual void OnDeath()
     {
         enemyList.Remove(this);
