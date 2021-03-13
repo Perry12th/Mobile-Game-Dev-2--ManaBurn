@@ -23,7 +23,6 @@ public class Bugs : EnemyBase
     }
     protected override void OnDeath()
     {
-
         Debug.Log("Death");
         OnDestroy();
     }

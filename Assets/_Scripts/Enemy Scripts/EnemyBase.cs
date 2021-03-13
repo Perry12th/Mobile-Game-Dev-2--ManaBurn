@@ -68,9 +68,10 @@ public class EnemyBase : MonoBehaviour
         OnDeath();
     }
 
-    protected void OnDestroy()
+    protected virtual void OnDestroy()
     {
         enemyList.Remove(this);
+        Destroy(gameObject);
     }
     public int getDamage()
     {
