@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBase : MonoBehaviour
 {
     public static List<EnemyBase> enemyList = new List<EnemyBase>();
-
+    public EnemyManager enemyManager;
 
     public static EnemyBase GetClosestEnemy(Vector3 position, float maxRange)
 
