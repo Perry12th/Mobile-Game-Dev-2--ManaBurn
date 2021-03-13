@@ -9,12 +9,6 @@ public class RandomItemSystem : MonoBehaviour
     public GameObject randomSpawnItem;
     public GameObject spawnedItemObject;
 
-    //
-    public float NorthBounds;
-    public float SouthBounds;
-    public float EastBounds;
-    public float WestBounds;
-
     public Coroutine spawnRandomItemCoroutine;
 
     // Start is called before the first frame update
@@ -38,20 +32,11 @@ public class RandomItemSystem : MonoBehaviour
             spawnedItemObject = Instantiate(randomSpawnItem);
             int randItemNum = Random.Range(0, randomItemsToSpawn.Length);
             spawnedItemObject.GetComponent<RandomItemScript>().randomizedItem = randomItemsToSpawn[randItemNum];
-            spawnedItemObject.transform.position = new Vector3(Random.Range(WestBounds, EastBounds), 1.0f, Random.Range(SouthBounds, NorthBounds));
+            spawnedItemObject.transform.position = new Vector3(Random.Range(GameManager.Instance.getGameBounds().WestBounds, 
+                                                                            GameManager.Instance.getGameBounds().EastBounds), 
+                                                                            1.0f, 
+                                                               Random.Range(GameManager.Instance.getGameBounds().SouthBounds, 
+                                                                            GameManager.Instance.getGameBounds().NorthBounds));
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        // Top Line
-        Gizmos.DrawLine(new Vector3(WestBounds, 1.0f, NorthBounds), new Vector3(EastBounds, 1.0f, NorthBounds));
-        // Left Line
-        Gizmos.DrawLine(new Vector3(WestBounds, 1.0f, NorthBounds), new Vector3(WestBounds, 1.0f, SouthBounds));
-        // Bot Line
-        Gizmos.DrawLine(new Vector3(WestBounds, 1.0f, SouthBounds), new Vector3(EastBounds, 1.0f, SouthBounds));
-        // Right Line
-        Gizmos.DrawLine(new Vector3(EastBounds, 1.0f, NorthBounds), new Vector3(EastBounds, 1.0f, SouthBounds));
     }
 }

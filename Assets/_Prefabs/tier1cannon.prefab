@@ -816,11 +816,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2527601a0e5c4da9d03c64b5e09d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  costToDeploy: 0
+  resourceUsed: 0
+  costToDeploy: 15
   rateOfFire: 2
   towerRange: 10
   projectile: {fileID: 3547926998068464690, guid: a222407102e73254b952872312061a6b, type: 3}
+<<<<<<< Updated upstream
   spawnPoint: {fileID: 7413711398502384578}
+=======
+  spawnPoint: {fileID: 0}
+>>>>>>> Stashed changes
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64

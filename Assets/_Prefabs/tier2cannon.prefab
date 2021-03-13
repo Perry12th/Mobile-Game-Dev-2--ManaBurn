@@ -733,6 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab545e48cab4ee4db28af967cc25d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceUsed: 2
   costToDeploy: 0
   rateOfFire: 1.5
   towerRange: 15

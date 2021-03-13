@@ -8,6 +8,7 @@ public class ItemSlot : MonoBehaviour
     public Item itemInSlot;
     public GameObject itemGameObject;
     public GameObject itemUsesGameObject;
+
     private void Awake()
     {
         if (hasItemInSlot())

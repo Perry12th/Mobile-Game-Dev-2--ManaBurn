@@ -1153,9 +1153,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSystem: {fileID: 211893874}
   inventorySystem: {fileID: 211893876}
+  NorthBounds: 18.14
+  SouthBounds: -28.11
+  EastBounds: 40.81
+  WestBounds: -12.95
   globalDamageMultiplier: 1
   Money: 500
+  Wood: 500
+  Stone: 500
   moneyText: {fileID: 2005253327}
+  woodText: {fileID: 0}
+  stoneText: {fileID: 0}
 --- !u!114 &211893879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,10 +1224,6 @@ MonoBehaviour:
   spawnIntervals: 1
   randomSpawnItem: {fileID: 2003557014361977151, guid: 14381d20d2d10024e8b81c7b8e9b2f37, type: 3}
   spawnedItemObject: {fileID: 0}
-  NorthBounds: 9
-  SouthBounds: -11
-  EastBounds: 8
-  WestBounds: -12
 --- !u!1 &215605065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,6 +4526,7 @@ GameObject:
   - component: {fileID: 1158924106}
   - component: {fileID: 1158924105}
   - component: {fileID: 1158924104}
+  - component: {fileID: 1158924107}
   m_Layer: 0
   m_Name: Road Mesh Holder
   m_TagString: Untagged
@@ -4594,6 +4599,20 @@ Transform:
   m_Father: {fileID: 1541002104}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1158924107
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158924103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 50710379}
 --- !u!1 &1192977351
 GameObject:
   m_ObjectHideFlags: 0

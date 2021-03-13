@@ -7,7 +7,10 @@ public abstract class TowerBase : MonoBehaviour
 
     [Header("Basic Tower Stats")]
     [SerializeField]
+    protected Resource resourceUsed;
+    [SerializeField]
     protected int costToDeploy;
+
     public int cost => costToDeploy;
     [SerializeField]
     protected float rateOfFire;
@@ -24,9 +27,21 @@ public abstract class TowerBase : MonoBehaviour
     [SerializeField]
     protected AudioSource turretSFX;
 
-    protected abstract void Fire();
+    public Resource getResourceUsed()
+    {
+        return resourceUsed;
+    }
+    public int getResourceCost()
+    {
+        return costToDeploy;
+    }
 
-    
+    public Sprite getSprite()
+    {
+        return GameManager.Instance.getSprite(resourceUsed);
+    }
+
+    protected abstract void Fire();
 
     //protected virtual void OnTriggerEnter(Collider other)
     //{
