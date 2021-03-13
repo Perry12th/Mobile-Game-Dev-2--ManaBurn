@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bugs : EnemyBase
 {
 
-    public EnemyManager enemyManager;
 
     void Start()
     {
