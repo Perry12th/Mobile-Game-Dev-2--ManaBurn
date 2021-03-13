@@ -820,7 +820,7 @@ MonoBehaviour:
   rateOfFire: 2
   towerRange: 10
   projectile: {fileID: 3547926998068464690, guid: a222407102e73254b952872312061a6b, type: 3}
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 7413711398502384578}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64

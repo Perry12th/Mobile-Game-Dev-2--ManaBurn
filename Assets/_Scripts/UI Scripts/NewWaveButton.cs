@@ -11,9 +11,15 @@ public class NewWaveButton : MonoBehaviour
     private bool spawningEnemies;
     private int enemiesSpawned;
 
+    private void Update()
+    {
+        Debug.Log("This is the enemyList (Perry's thing) " + EnemyBase.enemyList.Count);
+
+    }
+
     public void startNextWaveButton()
     {
-        if (enemyManager.enemyCount == 0)
+        if (EnemyBase.enemyList.Count <= 0)
         {
             enemyManager.StartWave();
 

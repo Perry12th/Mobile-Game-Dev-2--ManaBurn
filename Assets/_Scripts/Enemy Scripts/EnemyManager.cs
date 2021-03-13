@@ -15,7 +15,6 @@ public class EnemyManager : MonoBehaviour
     public GameObject enemy2;
     public int maxEnemies;
     public int waveDifficulty;
-    public int enemyCount;
 
     private int waveNum;
 
@@ -27,7 +26,6 @@ public class EnemyManager : MonoBehaviour
     {
         cmds.WaveNumber = 2;
         waveNum = 0;
-        enemyCount = 0;
     }
 
 
@@ -47,7 +45,6 @@ public class EnemyManager : MonoBehaviour
         {
 
             Instantiate(enemy);
-            enemyCount++;
             yield return new WaitForSeconds(0.2f);
 
         }
@@ -55,7 +52,6 @@ public class EnemyManager : MonoBehaviour
         for (int i = 0; i < waveDifficulty; i++)
         {
             Instantiate(enemy2);
-            enemyCount++;
             yield return new WaitForSeconds(0.7f);
 
         }
