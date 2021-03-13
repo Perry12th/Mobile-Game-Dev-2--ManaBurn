@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 3458571483299814978}
   - component: {fileID: 3069236600389080445}
   - component: {fileID: 8681507046899158547}
+  - component: {fileID: 208431109270848217}
   m_Layer: 8
   m_Name: tier3cannon
   m_TagString: Untagged
@@ -708,6 +709,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &208431109270848217
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634973862511019553}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &4209999302867891544
 GameObject:
   m_ObjectHideFlags: 0

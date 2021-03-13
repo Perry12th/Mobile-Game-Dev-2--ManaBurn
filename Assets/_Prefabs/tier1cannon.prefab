@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 1677648093327297367}
   - component: {fileID: 4441669389402113155}
   - component: {fileID: 8573900647167147147}
+  - component: {fileID: 7477266461179859520}
   m_Layer: 8
   m_Name: tier1cannon
   m_TagString: Untagged
@@ -819,7 +820,7 @@ MonoBehaviour:
   rateOfFire: 2
   towerRange: 10
   projectile: {fileID: 3547926998068464690, guid: a222407102e73254b952872312061a6b, type: 3}
-  sapwnPoint: {fileID: 7413711398502384578}
+  spawnPoint: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -922,3 +923,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &7477266461179859520
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9194709034206600576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2
+  m_Center: {x: 0, y: 0.7, z: 0}
