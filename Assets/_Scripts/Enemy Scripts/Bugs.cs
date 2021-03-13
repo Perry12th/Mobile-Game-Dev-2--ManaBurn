@@ -34,8 +34,6 @@ public class Bugs : EnemyBase
     {
         Debug.Log("Death");
 
-        enemyManager.ReturnEnemy(gameObject);
-        //enemyList.Remove(this);
-        //Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 0.1f);
     }
 }
