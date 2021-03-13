@@ -17,7 +17,7 @@ public class UnityProjectile : ProjectileBase
     // Update is called once per frame
     void Update()
     {
-        if (trackingTarget.gameObject.activeSelf)
+        if (trackingTarget && trackingTarget.gameObject.activeSelf)
         {
             targetPosition = trackingTarget.transform.position;
             moveDir = (targetPosition - transform.position).normalized;
