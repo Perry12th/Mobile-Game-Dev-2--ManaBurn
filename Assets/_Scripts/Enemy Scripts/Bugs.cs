@@ -12,30 +12,19 @@ public class Bugs : EnemyBase
         enemyManager = FindObjectOfType<EnemyManager>();
     }
 
-    //protected void OnTriggerEnter(Collider other)
-    //{
-    //    ProjectileBase projectile = other.GetComponent<ProjectileBase>();
-
-    //    if (projectile)
-    //    {
-    //        Destroy(other);
-    //        Debug.Log("Projectile hit");
-    //        OnHit(projectile); 
-    //    }
-    //}
-
     public override void OnHit(ProjectileBase projectile)
     {
         enemySFX.Play();
-        OnDeath();
-        
+        health -= projectile.Damage;
+        if (health <= 0)
+        {
+            OnDeath();
+        }
+       
     }
     protected override void OnDeath()
     {
         Debug.Log("Death");
-
-        enemyManager.ReturnEnemy(gameObject);
-        //enemyList.Remove(this);
-        //Destroy(gameObject, 0.1f);
+        OnDestroy();
     }
 }

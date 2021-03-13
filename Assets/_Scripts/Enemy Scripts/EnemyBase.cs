@@ -37,9 +37,9 @@ public class EnemyBase : MonoBehaviour
 
     [Header("Basic Enemy Stats")]
     [SerializeField]
-    int health;
+    protected int health;
     [SerializeField]
-    float speed;
+    protected float speed;
     [SerializeField]
     protected AudioSource enemySFX;
 
@@ -59,7 +59,7 @@ public class EnemyBase : MonoBehaviour
         OnDeath();
     }
 
-    private void OnDestroy()
+    protected void OnDestroy()
     {
         enemyList.Remove(this);
     }
