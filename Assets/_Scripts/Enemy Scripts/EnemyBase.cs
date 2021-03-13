@@ -6,7 +6,9 @@ public class EnemyBase : MonoBehaviour
 {
     public static List<EnemyBase> enemyList = new List<EnemyBase>();
 
+
     public static EnemyBase GetClosestEnemy(Vector3 position, float maxRange)
+
     {
         EnemyBase closest = null;
         foreach (EnemyBase enemy in enemyList)
@@ -39,6 +41,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField]
     protected int health;
     [SerializeField]
+    protected int damage;
+    [SerializeField]
     protected float speed;
     [SerializeField]
     protected AudioSource enemySFX;
@@ -62,6 +66,10 @@ public class EnemyBase : MonoBehaviour
     protected void OnDestroy()
     {
         enemyList.Remove(this);
+    }
+    public int getDamage()
+    {
+        return damage;
     }
 
 }

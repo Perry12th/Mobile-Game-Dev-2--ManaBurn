@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 3946789365228896940}
   m_Layer: 6
   m_Name: Enemy MK2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
-  endOfPathInstruction: 0
+  endOfPathInstruction: 2
   speed: 2
 --- !u!114 &6266855437418233826
 MonoBehaviour:
@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  damage: 15
   speed: 2
   enemySFX: {fileID: 3946789365228896940}
   enemyManager: {fileID: 0}

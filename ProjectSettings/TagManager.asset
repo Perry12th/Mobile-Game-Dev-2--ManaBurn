@@ -6,6 +6,8 @@ TagManager:
   tags:
   - MapBounds
   - RandomItem
+  - Enemy
+  - Enemy2
   layers:
   - Default
   - TransparentFX

@@ -13,10 +13,11 @@ public class NewWaveButton : MonoBehaviour
 
     public void startNextWaveButton()
     {
+        if (enemyManager.enemyCount == 0)
+        {
+            enemyManager.StartWave();
 
-           enemyManager.StartWave();
-           
-
+        }
 
     }
 
