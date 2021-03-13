@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3516671355806212101}
   - component: {fileID: 6168867594464654666}
   - component: {fileID: 3008931439774426041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barrel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7561059443911364754}
   - component: {fileID: 720165297981360979}
   - component: {fileID: 2779061505854038330}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trunnion2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,6 +163,87 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1365096791871132053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3989777772471221238}
+  - component: {fileID: 5830575518820131771}
+  - component: {fileID: 2885844289081929771}
+  m_Layer: 10
+  m_Name: Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3989777772471221238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365096791871132053}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.641, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 6036473505756467590}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!33 &5830575518820131771
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365096791871132053}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2885844289081929771
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365096791871132053}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d2d2a7bdab1bc84a99d935858f618be, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2223368596650663505
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +255,7 @@ GameObject:
   - component: {fileID: 94519940684684735}
   - component: {fileID: 4528793533521495289}
   - component: {fileID: 7682551798642945026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: base1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +337,7 @@ GameObject:
   - component: {fileID: 5334252597985708912}
   - component: {fileID: 8251608231218902624}
   - component: {fileID: 5940232737499571694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8996993656622788443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +449,7 @@ GameObject:
   - component: {fileID: 1613011701826943086}
   - component: {fileID: 5231882080337783573}
   - component: {fileID: 7386778775038094501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barrel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +531,7 @@ GameObject:
   - component: {fileID: 8736790950150032736}
   - component: {fileID: 7759884922014050838}
   - component: {fileID: 27026093299491314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: base_low 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +614,7 @@ GameObject:
   - component: {fileID: 6036473505756467590}
   - component: {fileID: 729678989778226054}
   - component: {fileID: 5331952718501230046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,6 +633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5334252597985708912}
+  - {fileID: 3989777772471221238}
   m_Father: {fileID: 8736790950150032736}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -616,7 +698,7 @@ GameObject:
   - component: {fileID: 6379391442885476222}
   - component: {fileID: 5613715808452431184}
   - component: {fileID: 5997034900437026901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tier2cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +736,7 @@ MonoBehaviour:
   rateOfFire: 1.5
   towerRange: 15
   projectile: {fileID: 4599926170889032814, guid: 60929c0ddb7ef8046b631330cd723713, type: 3}
-  sapwnPoint: {fileID: 8996993656622788443}
+  spawnPoint: {fileID: 8996993656622788443}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -768,7 +850,7 @@ GameObject:
   - component: {fileID: 8808404253380623360}
   - component: {fileID: 4137806390846924330}
   - component: {fileID: 1265924197344255082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trunnion 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

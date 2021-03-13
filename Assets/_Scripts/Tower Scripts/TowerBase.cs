@@ -16,7 +16,7 @@ public abstract class TowerBase : MonoBehaviour
     [SerializeField]
     protected GameObject projectile;
     [SerializeField]
-    protected Transform sapwnPoint;
+    protected Transform spawnPoint;
     [SerializeField]
     protected LayerMask enemyLayers;
     [SerializeField]

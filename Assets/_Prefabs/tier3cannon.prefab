@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2288161920831272240}
   - component: {fileID: 8585188349031367121}
   - component: {fileID: 5253491765691782146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: largebase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,6 +83,87 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &574082778237303581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3439854927697526346}
+  - component: {fileID: 6875942751732957539}
+  - component: {fileID: 6164391430453075533}
+  m_Layer: 10
+  m_Name: Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3439854927697526346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574082778237303581}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.615, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 6293567365707967105}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!33 &6875942751732957539
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574082778237303581}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6164391430453075533
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574082778237303581}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d2d2a7bdab1bc84a99d935858f618be, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1156900521237932672
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +175,7 @@ GameObject:
   - component: {fileID: 8874308630506073401}
   - component: {fileID: 7481795174414794746}
   - component: {fileID: 7977364500766840676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barrel2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +257,7 @@ GameObject:
   - component: {fileID: 6293567365707967105}
   - component: {fileID: 5520621426824697520}
   - component: {fileID: 7293851761646327715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,6 +276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6135032281761406359}
+  - {fileID: 3439854927697526346}
   m_Father: {fileID: 3649099977738431925}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -259,7 +341,7 @@ GameObject:
   - component: {fileID: 6135032281761406359}
   - component: {fileID: 1084787894026364003}
   - component: {fileID: 728750994577782905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +421,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6155348920191213300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +453,7 @@ GameObject:
   - component: {fileID: 5823116008722876809}
   - component: {fileID: 4564110396844122371}
   - component: {fileID: 3047886723316011949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trunnion3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1509366083351955296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPoint B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +564,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3458571483299814978}
-  m_Layer: 0
+  - component: {fileID: 3069236600389080445}
+  - component: {fileID: 8681507046899158547}
+  m_Layer: 8
   m_Name: tier3cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,6 +588,126 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3069236600389080445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634973862511019553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee8ebe6636df8f4b97b60cef43a3189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costToDeploy: 0
+  rateOfFire: 1.5
+  towerRange: 20
+  projectile: {fileID: 4599926170889032814, guid: 60929c0ddb7ef8046b631330cd723713, type: 3}
+  spawnPoint: {fileID: 6155348920191213300}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  EnemyTarget: {fileID: 0}
+  turretSFX: {fileID: 8681507046899158547}
+  towerBase: {fileID: 6293567365707967105}
+  spawnPoint2: {fileID: 1509366083351955296}
+--- !u!82 &8681507046899158547
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634973862511019553}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6804458479115754119, guid: 070d935575935a4448ec630fd103bee4, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 1a15faf7159212c4ab2e147bd7caa647, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4209999302867891544
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +719,7 @@ GameObject:
   - component: {fileID: 3649099977738431925}
   - component: {fileID: 5453519843018895933}
   - component: {fileID: 7033438978082020393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: largebase1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +801,7 @@ GameObject:
   - component: {fileID: 3112564334444363404}
   - component: {fileID: 1858261137877464611}
   - component: {fileID: 2642013224873450763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barrel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +883,7 @@ GameObject:
   - component: {fileID: 3741514177760395232}
   - component: {fileID: 4925325210113282805}
   - component: {fileID: 8885110120340882715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barrel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +965,7 @@ GameObject:
   - component: {fileID: 4261887834461446340}
   - component: {fileID: 6313859000956146075}
   - component: {fileID: 3205591505744362418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: barrel1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +1047,7 @@ GameObject:
   - component: {fileID: 5739014854738294346}
   - component: {fileID: 1009021833680928898}
   - component: {fileID: 3539917419209588259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trunnion 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

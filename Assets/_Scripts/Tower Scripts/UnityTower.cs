@@ -31,7 +31,7 @@ public class UnityTower : TowerBase
 
         if (EnemyTarget)
         {
-            var newProjectile = Instantiate(projectile, sapwnPoint.position, Quaternion.identity);
+            var newProjectile = Instantiate(projectile, spawnPoint.position, Quaternion.identity);
             turretSFX.Play();
             newProjectile.GetComponent<UnityProjectile>().SetTarget(EnemyTarget);
         }

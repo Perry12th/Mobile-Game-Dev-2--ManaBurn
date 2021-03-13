@@ -30,7 +30,7 @@ public class UnityTowerMk2 : TowerBase
 
         if (EnemyTarget)
         {
-            var newProjectile = Instantiate(projectile, sapwnPoint.position, Quaternion.identity);
+            var newProjectile = Instantiate(projectile, spawnPoint.position, Quaternion.identity);
             var enemyDirection = EnemyTarget.transform.position - towerBase.transform.position;
             enemyDirection.y = 0;
             newProjectile.GetComponent<UnityAPProjectile>().SetTarget(EnemyTarget);

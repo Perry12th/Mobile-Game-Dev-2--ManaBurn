@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2343935786531146232}
   - component: {fileID: 7994206953552363778}
   - component: {fileID: -3652583679509039716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnityAPProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

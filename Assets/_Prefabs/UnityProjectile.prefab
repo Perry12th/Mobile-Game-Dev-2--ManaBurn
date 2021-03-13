@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1392112403926651054}
   - component: {fileID: -855245456778442109}
   - component: {fileID: -8403761157775659403}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UnityProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
