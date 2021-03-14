@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e2527601a0e5c4da9d03c64b5e09d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceUsed: 0
   costToDeploy: 10
   rateOfFire: 5
   towerRange: 10
@@ -868,7 +869,7 @@ GameObject:
   - component: {fileID: 2433492038497226490}
   - component: {fileID: 4538947346356408485}
   m_Layer: 10
-  m_Name: Quad
+  m_Name: Marker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -881,13 +882,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7257026725499006469}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 1.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 7856917636050225826}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!33 &3897256159724574549
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -915,7 +916,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d2d2a7bdab1bc84a99d935858f618be, type: 2}
+  - {fileID: 2100000, guid: 923321fa8266c87449f9a5ce79d30c4e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
