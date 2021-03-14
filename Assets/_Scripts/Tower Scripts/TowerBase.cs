@@ -12,6 +12,9 @@ public abstract class TowerBase : MonoBehaviour
     protected int costToDeploy;
 
     public int cost => costToDeploy;
+
+    [SerializeField]
+    protected Sprite towerSprite;
     [SerializeField]
     protected float rateOfFire;
     [SerializeField]
@@ -40,7 +43,10 @@ public abstract class TowerBase : MonoBehaviour
     {
         return GameManager.Instance.getSprite(resourceUsed);
     }
-
+    public Sprite getTowerSprite()
+    {
+        return towerSprite;
+    }
     protected abstract void Fire();
 
     //protected virtual void OnTriggerEnter(Collider other)

@@ -733,8 +733,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab545e48cab4ee4db28af967cc25d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceUsed: 2
-  costToDeploy: 0
+  resourceUsed: 1
+  costToDeploy: 250
+  towerSprite: {fileID: 21300000, guid: 5f443196c7b00504fb92b3ad98b95aca, type: 3}
   rateOfFire: 1.5
   towerRange: 15
   projectile: {fileID: 4599926170889032814, guid: 60929c0ddb7ef8046b631330cd723713, type: 3}

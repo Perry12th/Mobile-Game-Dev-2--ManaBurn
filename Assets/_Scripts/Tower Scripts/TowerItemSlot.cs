@@ -22,6 +22,7 @@ public class TowerItemSlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
             towerCostGameObject.SetActive(true);
             towerResourceImageGameObject.SetActive(true);
 
+            towerGameObject.GetComponent<Image>().sprite = towerPrefab.GetComponent<TowerBase>().getTowerSprite();
             towerCostGameObject.GetComponent<TMPro.TextMeshProUGUI>().text = towerPrefab.GetComponent<TowerBase>().getResourceCost().ToString();
             towerResourceImageGameObject.GetComponent<Image>().sprite = towerPrefab.GetComponent<TowerBase>().getSprite();
         }

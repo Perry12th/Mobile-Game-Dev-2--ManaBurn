@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceUsed: 0
-  costToDeploy: 10
+  costToDeploy: 400
+  towerSprite: {fileID: 21300000, guid: 996b65f2625457b41b21525ef498930d, type: 3}
   rateOfFire: 5
   towerRange: 10
   projectile: {fileID: 0}
