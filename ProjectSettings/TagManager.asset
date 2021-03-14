@@ -7,7 +7,7 @@ TagManager:
   - MapBounds
   - RandomItem
   - Enemy
-  - Enemy2
+  - Tower
   layers:
   - Default
   - TransparentFX

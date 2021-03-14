@@ -30,6 +30,14 @@ public abstract class TowerBase : MonoBehaviour
     [SerializeField]
     protected AudioSource turretSFX;
 
+    [SerializeField]
+    protected bool placeable = false;
+
+    protected virtual void Update()
+    {
+        Debug.Log(placeable);
+    }
+
     public Resource getResourceUsed()
     {
         return resourceUsed;
@@ -47,17 +55,21 @@ public abstract class TowerBase : MonoBehaviour
     {
         return towerSprite;
     }
+
+    public bool isPlaceable()
+    {
+        return placeable;
+    }
+
     protected abstract void Fire();
 
-    //protected virtual void OnTriggerEnter(Collider other)
-    //{
-    //    EnemyBase possibleEnemy = other.GetComponent<EnemyBase>();
-
-    //    if (possibleEnemy && EnemyTarget == null)
-    //    {
-    //        EnemyTarget = possibleEnemy.gameObject;
-    //    }
-    //}
+    protected virtual void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("MapBounds") || other.CompareTag("Tower"))
+            placeable = false;
+        else
+            placeable = true;
+    }
 
     protected EnemyBase GetClosestEnemy()
     {

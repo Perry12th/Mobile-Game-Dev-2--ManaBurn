@@ -46,13 +46,27 @@ public class TowerItemSlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
         if(Physics.Raycast(mouseRay, out mouseRayHit))
         {
-            towerPrefabSpawned.transform.position = mouseRayHit.point;
+            Vector3 towerPos = mouseRayHit.point;
+            gameBounds mapBoundry = GameManager.Instance.getGameBounds();
+
+            towerPos.y = 0.0f;
+            if (towerPos.x < mapBoundry.WestBounds)
+                towerPos.x = mapBoundry.WestBounds;
+            else if (towerPos.x > mapBoundry.EastBounds)
+                towerPos.x = mapBoundry.EastBounds;
+
+            if (towerPos.z < mapBoundry.SouthBounds)
+                towerPos.z = mapBoundry.SouthBounds;
+            else if (towerPos.z > mapBoundry.NorthBounds)
+                towerPos.z = mapBoundry.NorthBounds;
+
+            towerPrefabSpawned.transform.position = towerPos;
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (validPlacement)
+        if (towerPrefabSpawned.GetComponent<TowerBase>().isPlaceable())
         {
 
         }

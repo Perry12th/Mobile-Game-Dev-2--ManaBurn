@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4153978712327191742}
   - component: {fileID: 2939366155033097342}
   - component: {fileID: 9064409893786121831}
+  - component: {fileID: 7719358110017554981}
   m_Layer: 0
   m_Name: tier1cannon
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409162751639081553}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -58,6 +59,7 @@ MonoBehaviour:
     m_Bits: 64
   EnemyTarget: {fileID: 0}
   turretSFX: {fileID: 2939366155033097342}
+  placeable: 0
   towerBase: {fileID: 7856917636050225826}
 --- !u!82 &2939366155033097342
 AudioSource:
@@ -166,8 +168,24 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.5
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7719358110017554981
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409162751639081553}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1041884701583609673
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +886,6 @@ GameObject:
   - component: {fileID: 1720980806487023113}
   - component: {fileID: 3897256159724574549}
   - component: {fileID: 2433492038497226490}
-  - component: {fileID: 4538947346356408485}
   m_Layer: 10
   m_Name: Marker
   m_TagString: Untagged
@@ -939,17 +956,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4538947346356408485
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7257026725499006469}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
