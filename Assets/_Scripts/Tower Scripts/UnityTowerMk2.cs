@@ -13,9 +13,8 @@ public class UnityTowerMk2 : TowerBase
 
     }
 
-    protected override void Update()
+    private void Update()
     {
-        base.Update();
         EnemyTarget = GetClosestEnemy();
 
         if (EnemyTarget)

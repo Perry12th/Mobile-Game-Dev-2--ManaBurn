@@ -33,11 +33,6 @@ public abstract class TowerBase : MonoBehaviour
     [SerializeField]
     protected bool placeable = false;
 
-    protected virtual void Update()
-    {
-        Debug.Log(placeable);
-    }
-
     public Resource getResourceUsed()
     {
         return resourceUsed;
@@ -63,14 +58,23 @@ public abstract class TowerBase : MonoBehaviour
 
     protected abstract void Fire();
 
-    protected virtual void OnTriggerStay(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("MapBounds") || other.CompareTag("Tower"))
+        if (other.CompareTag("MapBounds") || (other.CompareTag("Tower") && other.gameObject != this))
             placeable = false;
         else
             placeable = true;
+        //Debug.Log("Enter: " + isPlaceable());
     }
 
+    protected virtual void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("MapBounds") || (other.CompareTag("Tower") && other.gameObject != this))
+            placeable = true;
+        else
+            placeable = false;
+        Debug.Log("Exit: " + isPlaceable());
+    }
     protected EnemyBase GetClosestEnemy()
     {
        return EnemyBase.GetClosestEnemy(transform.position, towerRange);
