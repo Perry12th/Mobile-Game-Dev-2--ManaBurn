@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e84fb4767bd13de48a53f2c6c85e14cf, type: 3}
   m_Name: MoneyGenerator
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 21300000, guid: cc9f77fac7f441c43b5d6246d201f014, type: 3}
+  itemIcon: {fileID: 21300000, guid: d5485d48ca365394fa095696da93d364, type: 3}
   Description: Gives a little bit of money
-  Uses: 3
+  Uses: 17
   affectsHealth: 0
   affectsDamageMultiplier: 0
   givesMoney: 1

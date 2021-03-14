@@ -13,6 +13,7 @@ public class TowerItemSlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
     public GameObject towerCostGameObject;
     public GameObject towerResourceImageGameObject;
 
+    public bool validPlacement = false;
     private void Start()
     {
         if(hasTowerInSlot())
