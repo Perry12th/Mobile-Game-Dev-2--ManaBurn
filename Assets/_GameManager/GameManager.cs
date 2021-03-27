@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum Resource
 {
@@ -102,13 +103,16 @@ public class GameManager : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField]
-    private TMPro.TextMeshProUGUI moneyText;
+    private TextMeshProUGUI moneyText;
 
     [SerializeField]
-    private TMPro.TextMeshProUGUI woodText;
+    private TextMeshProUGUI woodText;
 
     [SerializeField]
-    private TMPro.TextMeshProUGUI stoneText;
+    private TextMeshProUGUI stoneText;
+
+    [SerializeField]
+    private bool isFastFoward = false;
 
     public HealthSystem getHealthSystem()
     {
@@ -118,6 +122,19 @@ public class GameManager : MonoBehaviour
     public InventorySystem getInventorySystem()
     {
         return inventorySystem;
+    }
+
+    public void fastForward()
+    {
+        isFastFoward = !isFastFoward;
+        if(isFastFoward)
+        {
+            Time.timeScale = 2.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
     }
 
     public int getMoney()

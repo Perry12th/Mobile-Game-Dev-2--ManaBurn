@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 /*
 Health States, 
 Default: Normal Regen rate, whatever HealthRegenRate is set too.
@@ -67,6 +67,11 @@ public class HealthSystem : MonoBehaviour
     public void Damage(int damage)
     {
         currentHealth -= damage;
+        if(currentHealth >= 0)
+        {
+            //game over
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     // Update  MaxHealth to any value
