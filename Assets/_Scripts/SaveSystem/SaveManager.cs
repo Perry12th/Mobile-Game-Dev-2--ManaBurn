@@ -136,4 +136,16 @@ public class SaveManager : MonoBehaviour
     {
         return File.Exists(string.Concat(Application.persistentDataPath, savePath));
     }
+
+    public int GetWaveNum()
+    {
+        if (SaveExists())
+        {
+            return saveFile.waveNum;
+        }
+        else
+        {
+            return -1;
+        }
+    }
 }
