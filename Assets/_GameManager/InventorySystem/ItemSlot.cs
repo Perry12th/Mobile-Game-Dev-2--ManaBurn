@@ -52,4 +52,9 @@ public class ItemSlot : MonoBehaviour
     {
         return itemInSlot != null;
     }
+
+    public Item getItem()
+    {
+        return itemInSlot;
+    }
 }

@@ -91,4 +91,9 @@ public class Item : ScriptableObject
     {
         Uses += num;
     }
+
+    public void setUses(int num)
+    {
+        Uses = num;
+    }
 }

@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TowerTypes
+{ 
+    UnityTower,
+    UnityMk2,
+    UnityMk3
+}
+
 public abstract class TowerBase : MonoBehaviour
 {
 
@@ -10,7 +17,8 @@ public abstract class TowerBase : MonoBehaviour
     protected Resource resourceUsed;
     [SerializeField]
     protected int costToDeploy;
-
+    [SerializeField]
+    protected TowerTypes type;
     public int cost => costToDeploy;
 
     [SerializeField]
@@ -80,4 +88,20 @@ public abstract class TowerBase : MonoBehaviour
        return EnemyBase.GetClosestEnemy(transform.position, towerRange);
     }
 
+    public virtual TowerSave Save()
+    {
+        TowerSave save = new TowerSave();
+        save.towerID = SaveManager.instance.saveDatabase.GetTowerID[type];
+        save.towerPosition = new float[] { transform.position.x, transform.position.y, transform.position.z };
+        save.towerRotation = new float[] { transform.rotation.x, transform.rotation.y, transform.rotation.z };
+        return save;
+    }
+
+    public virtual void Load(TowerSave save)
+    {
+        Vector3 newPosition = new Vector3(save.towerPosition[0], save.towerPosition[1], save.towerPosition[2]);
+        Vector3 newRotation = new Vector3(save.towerRotation[0], save.towerRotation[1], save.towerRotation[2]);
+        transform.position = newPosition;
+        transform.eulerAngles = newRotation;
+    }
 }

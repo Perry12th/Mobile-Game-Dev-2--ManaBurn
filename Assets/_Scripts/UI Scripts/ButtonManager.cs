@@ -19,6 +19,12 @@ public class ButtonManager : MonoBehaviour
     {
         audioSource.PlayOneShot(buttonPress, 0.8f);
         SceneManager.LoadScene("Game");
+        SaveManager.instance.SetLoadOnStart(false);
+    }
+
+    public void RestartWaveButton()
+    {
+        SaveManager.instance.SetLoadOnStart(true);
     }
     public void GameOverButton()
     {

@@ -71,4 +71,31 @@ public class InventorySystem : MonoBehaviour
             }
         }
     }
+
+    public InventroySave Save()
+    {
+        InventroySave save = new InventroySave();
+        save.slotSaves = new List<SlotSave>();
+        foreach(ItemSlot slot in inventoryItems)
+        {
+            if (slot.hasItemInSlot())
+            {
+                SlotSave slotSave = new SlotSave();
+                slotSave.numUses = slot.getItem().getUses();
+                slotSave.itemID = SaveManager.instance.saveDatabase.GetItemID[slot.getItem()];
+                save.slotSaves.Add(slotSave);
+            }
+        }
+        return save;
+    }
+
+    public void Load(InventroySave save)
+    {
+        for (int i = 0; i < save.slotSaves.Count; i++)
+        {
+            inventoryItems[i].addItemToSlot(SaveManager.instance.saveDatabase.GetItem[save.slotSaves[i].itemID]);
+            inventoryItems[i].getItem().setUses(save.slotSaves[i].numUses);
+            inventoryItems[i].updateItem();
+        }
+    }
 }

@@ -13,7 +13,7 @@ public class NewWaveButton : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("This is the enemyList (Perry's thing) " + EnemyBase.enemyList.Count);
+        //Debug.Log("This is the enemyList (Perry's thing) " + EnemyBase.enemyList.Count);
 
     }
 
@@ -21,6 +21,7 @@ public class NewWaveButton : MonoBehaviour
     {
         if (EnemyBase.enemyList.Count <= 0)
         {
+            SaveManager.instance.Save();
             enemyManager.StartWave();
 
         }

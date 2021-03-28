@@ -9,6 +9,10 @@ public class UnityTowerMk3 : TowerBase
     [SerializeField]
     Transform spawnPoint2;
 
+    private void Awake()
+    {
+        type = TowerTypes.UnityMk3;
+    }
     private void Start()
     {
         InvokeRepeating(nameof(Fire), 0, rateOfFire);
@@ -40,5 +44,22 @@ public class UnityTowerMk3 : TowerBase
             protectile2.GetComponent<UnityAPProjectile>().SetTarget(EnemyTarget);
             turretSFX.Play();
         }
+    }
+
+    public override TowerSave Save()
+    {
+        TowerSave save = new TowerSave();
+        save.towerID = SaveManager.instance.saveDatabase.GetTowerID[type];
+        save.towerPosition = new float[] { transform.position.x, transform.position.y, transform.position.z };
+        save.towerRotation = new float[] { towerBase.transform.rotation.x, towerBase.transform.rotation.y, towerBase.transform.rotation.z };
+        return save;
+    }
+
+    public override void Load(TowerSave save)
+    {
+        Vector3 newPosition = new Vector3(save.towerPosition[0], save.towerPosition[1], save.towerPosition[2]);
+        Vector3 newRotation = new Vector3(save.towerRotation[0], save.towerRotation[1], save.towerRotation[2]);
+        transform.position = newPosition;
+        towerBase.transform.eulerAngles = newRotation;
     }
 }

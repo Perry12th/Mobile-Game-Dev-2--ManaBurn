@@ -91,4 +91,22 @@ public class HealthSystem : MonoBehaviour
     {
         maxHealth -= maxHealthAmount;
     }
+
+    public HealthSave Save()
+    {
+        HealthSave save = new HealthSave();
+
+        save.maxHealth = maxHealth;
+        save.currentHealth = currentHealth;
+        save.healthRegenRate = healthRegenRate;
+
+        return save;
+    }
+
+    public void Load(HealthSave save)
+    {
+        maxHealth = save.maxHealth;
+        currentHealth = save.currentHealth;
+        healthRegenRate = save.healthRegenRate;
+    }
 }

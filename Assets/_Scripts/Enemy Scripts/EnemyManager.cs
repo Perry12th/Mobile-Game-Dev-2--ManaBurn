@@ -57,4 +57,14 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    public int GetWaveNum()
+    {
+        return waveNum;
+    }
+
+    public void SetWaveNum(int waveNum)
+    {
+        this.waveNum = waveNum;
+    }
+
 }

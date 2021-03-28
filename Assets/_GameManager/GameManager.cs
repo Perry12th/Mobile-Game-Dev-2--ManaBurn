@@ -152,6 +152,29 @@ public class GameManager : MonoBehaviour
         return Stone;
     }
 
+    public GameManagerSave Save()
+    {
+        GameManagerSave save = new GameManagerSave();
+
+        save.money = Money;
+        save.wood = Wood;
+        save.stone = Stone;
+        save.damageMultipler = globalDamageMultiplier;
+
+        return save;
+    }
+
+    public void Load(GameManagerSave save)
+    {
+        Money = save.money;
+        moneyText.text = Money.ToString();
+        Wood = save.wood;
+        moneyText.text = Wood.ToString();
+        Stone = save.stone;
+        stoneText.text = Stone.ToString();
+        globalDamageMultiplier = save.damageMultipler;
+    }
+
     public void increaseMoney(int moneyAmount)
     {
         Money += moneyAmount;
