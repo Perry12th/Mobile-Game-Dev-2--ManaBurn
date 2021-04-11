@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
             if (moneyText)
             {
                 moneyText.text = getMoney().ToString();
+                woodText.text = getWood().ToString();
+                stoneText.text = getStone().ToString();
             }
         }
         else
@@ -190,13 +192,13 @@ public class GameManager : MonoBehaviour
     public void increaseWood(int woodAmount)
     {
         Wood += woodAmount;
-        moneyText.text = Wood.ToString();
+        woodText.text = Wood.ToString();
     }
 
     public void decreaseWood(int woodAmount)
     {
         Wood -= woodAmount;
-        moneyText.text = Wood.ToString();
+        woodText.text = Wood.ToString();
     }
 
     public void increaseStone(int stoneAmount)

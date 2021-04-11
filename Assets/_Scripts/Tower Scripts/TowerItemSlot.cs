@@ -66,9 +66,48 @@ public class TowerItemSlot : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (towerPrefabSpawned.GetComponent<TowerBase>().isPlaceable())
+        TowerBase tb = towerPrefabSpawned.GetComponent<TowerBase>();
+        if (tb.isPlaceable())
         {
+            GameManager gm = GameManager.Instance;
+            switch (tb.getResourceUsed())
+            {
+                case Resource.MONEY:
+                    if (gm.getMoney() < tb.getResourceCost())
+                    {
+                        Destroy(towerPrefabSpawned);
+                        break;
+                    }
+                    gm.decreaseMoney(tb.getResourceCost());
+                    break;
 
+                case Resource.WOOD:
+                    if (gm.getWood() < tb.getResourceCost())
+                    {
+                        Destroy(towerPrefabSpawned);
+                        break;
+                    }
+                    gm.decreaseWood(tb.getResourceCost());
+                    break;
+
+                case Resource.STONE:
+                    if (gm.getStone() < tb.getResourceCost())
+                    {
+                        Destroy(towerPrefabSpawned);
+                        break;
+                    }
+                    gm.decreaseStone(tb.getResourceCost());
+                    break;
+
+                default:
+                    if (gm.getMoney() < tb.getResourceCost())
+                    {
+                        Destroy(towerPrefabSpawned);
+                        break;
+                    }
+                    gm.decreaseMoney(tb.getResourceCost());
+                    break;
+            }
         }
         else
         {
